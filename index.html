@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Autofix</title>
 </head>
+
 <body>
     <!-- Header: AutoFix - Reparación de Vehículos a Domicilio-->
 
@@ -21,7 +23,50 @@
 
     <!-- Formulario de: Solicitar Reparación -->
 
-
+    <div class="container my-5">
+        <h2>Solicitar Reparación</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nombreCliente" class="form-label">Nombre del Cliente</label>
+                <input type="text" class="form-control" id="nombreCliente">
+            </div>
+            <div class="mb-3">
+                <label for="reparacion" class="form-label">Tipo de Reparación</label>
+                <select class="form-select" id="tipoReparacion" required>
+                    <option selected disabled>Selecciona un servicio</option>
+                    <option value="aceite">Cambio de Aceite</option>
+                    <option value="frenos">Revisión de frenos</option>
+                    <option value="diagnostico">Diagnóstico eléctrico</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="descripcionTextarea" class="form-label">Descripción</label>
+                <textarea class="form-control" placeholder="Deja tu comentario" id="descripcionTextarea"
+                    style="height: 100px"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="fechaHora" class="form-label">Agendar Cita</label>
+                <input type="datetime-local" class="form-control" id="fechaHora">
+            </div>
+            <hr>
+            <h5>Información de Pago (simulado)</h5>
+            <div class="mb-3">
+                <label for="tarjeta" class="form-label">Número de Tarjeta</label>
+                <input type="text" class="form-control" id="tarjeta" placeholder="**** **** **** 1234">
+            </div>
+            <div class="mb-3">
+                <label for="titular" class="form-label">Nombre del titular</label>
+                <input type="text" class="form-control" id="titular">
+            </div>
+            <div class="mb-3">
+                <label for="cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cvv">
+            </div>
+            <div class="w-100 text-start">
+                <button type="submit" class="btn btn-success" id="solicitudReparacion">Confirmar Solicitud</button>
+            </div>
+        </form>
+    </div>
 
 
     <!-- Footer porque si -->
@@ -40,4 +85,5 @@
         crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
